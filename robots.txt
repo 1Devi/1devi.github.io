@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://1devi.github.io/video-to-tg-sticker/sitemap.xml

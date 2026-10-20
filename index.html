@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>1Devi</title>
+    <!-- Yandex Webmaster verifies the whole host (1devi.github.io) on this page. Do not remove. -->
+    <meta name="yandex-verification" content="2f6d73db8ab750c0" />
+    <meta name="description" content="Artemy (1Devi): projects and links." />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f5f6f8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#101217" media="(prefers-color-scheme: dark)" />
+    <link rel="canonical" href="https://1devi.github.io/" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='8'%20fill='%232b7de9'/%3E%3Cpath%20d='M11.5%2011.5%2016.5%208v16'%20fill='none'%20stroke='%23fff'%20stroke-width='3.4'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="1Devi" />
+    <meta property="og:description" content="Projects and links." />
+    <meta property="og:url" content="https://1devi.github.io/" />
+    <meta property="og:image" content="https://github.com/1Devi.png" />
+    <style>
+      :root {
+        --bg: #f5f6f8;
+        --surface: #ffffff;
+        --surface-hover: #eef2f8;
+        --border: #e0e3e9;
+        --border-hover: #c3cad6;
+        --text: #15171c;
+        --muted: #5b6270;
+        --accent: #2b7de9;
+        --shadow: 0 1px 2px rgb(16 18 23 / 0.05);
+        --radius: 14px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #101217;
+          --surface: #181b22;
+          --surface-hover: #20242d;
+          --border: #2a2f39;
+          --border-hover: #404756;
+          --text: #e9ebef;
+          --muted: #9aa2b1;
+          --accent: #6ea8ff;
+          --shadow: none;
+        }
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font: 16px/1.5 system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      }
+      main {
+        max-width: 520px;
+        margin: 0 auto;
+        padding: clamp(40px, 9vh, 88px) 16px 64px;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+      }
+
+      /* Header */
+      .profile {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+      .avatar {
+        display: block;
+        width: 112px;
+        height: 112px;
+        margin: 0 auto 16px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: var(--border);
+        box-shadow: 0 0 0 1px var(--border);
+      }
+      h1 {
+        margin: 0;
+        font-size: 1.75rem;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+      }
+      .bio {
+        margin: 6px 0 0;
+        color: var(--muted);
+      }
+
+      /* Social links: full-width buttons, icon on the left, label centered */
+      .links {
+        display: grid;
+        gap: 12px;
+      }
+      .link {
+        display: grid;
+        grid-template-columns: 24px 1fr 24px;
+        align-items: center;
+        gap: 12px;
+        min-height: 56px;
+        padding: 12px 16px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        color: inherit;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.15s, border-color 0.15s;
+      }
+      button.link {
+        width: 100%;
+        font: inherit;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .link:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+      }
+      .link::after {
+        content: ''; /* empty third column keeps the label centered */
+      }
+      .icon {
+        display: block;
+        width: 22px;
+        height: 22px;
+        justify-self: center;
+      }
+
+      /* Projects */
+      h2 {
+        margin: 40px 0 12px;
+        color: var(--muted);
+        font-size: 0.8125rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .projects {
+        display: grid;
+        gap: 12px;
+      }
+      .project {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 16px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        transition: background-color 0.15s, border-color 0.15s;
+      }
+      .project-logo {
+        flex: none;
+        display: block;
+        width: 44px;
+        height: 44px;
+      }
+      .project-body {
+        flex: 1;
+        min-width: 0;
+      }
+      .project-name {
+        color: inherit;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .project-name::after {
+        /* makes the whole card clickable */
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: var(--radius);
+      }
+      .project-name:focus-visible {
+        outline: none;
+      }
+      .project-name:focus-visible::after {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+      }
+      .project-desc {
+        margin: 2px 0 8px;
+        color: var(--muted);
+        font-size: 0.9375rem;
+      }
+      .project-alt {
+        position: relative;
+        z-index: 1;
+        color: var(--accent);
+        font-size: 0.875rem;
+        text-decoration: none;
+      }
+      .project-mark {
+        flex: none;
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: color-mix(in srgb, var(--accent) 16%, transparent);
+        color: var(--accent);
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+      .project-meta {
+        display: flex;
+        gap: 12px;
+        color: var(--muted);
+        font-size: 0.875rem;
+      }
+      .project-arrow {
+        flex: none;
+        align-self: center;
+        width: 20px;
+        height: 20px;
+        color: var(--muted);
+      }
+
+      @media (hover: hover) {
+        .link:hover,
+        .project:hover {
+          background: var(--surface-hover);
+          border-color: var(--border-hover);
+        }
+        .project-alt:hover {
+          text-decoration: underline;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .link,
+        .project {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="profile">
+        <img
+          class="avatar"
+          src="https://github.com/1Devi.png?size=224"
+          width="112"
+          height="112"
+          alt="1Devi"
+        />
+        <h1>1Devi</h1>
+        <!-- The age is recalculated by the script below; the number here is for no-JS visitors. -->
+        <p class="bio">Artemy, <span id="age">24</span> y.o.</p>
+      </header>
+
+      <!--
+        SOCIAL LINKS — one <li> per link, in page order.
+        Add one: copy a block, change href and the label, and take the icon's d="..."
+        from https://simpleicons.org (Simple Icons, CC0 1.0; brand names and logos are
+        trademarks of their owners). Icons use currentColor, so they follow the theme.
+      -->
+      <nav aria-label="Social links">
+        <ul class="links">
+          <li>
+            <a class="link" href="https://t.me/iDeviluxe" rel="me noopener">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" /></svg>
+              <span>Telegram</span>
+            </a>
+          </li>
+          <li>
+            <a class="link" href="https://x.com/deviluxe" rel="me noopener">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z" /></svg>
+              <span>X</span>
+            </a>
+          </li>
+          <li>
+            <a class="link" href="https://www.instagram.com/artemy_sv/" rel="me noopener">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" /></svg>
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a class="link" href="https://www.tiktok.com/@1devi" rel="me noopener">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" /></svg>
+              <span>TikTok</span>
+            </a>
+          </li>
+          <li>
+            <!-- Discord has no profile URL by username, so this button copies it instead. -->
+            <button class="link" type="button" data-copy="idevi">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" /></svg>
+              <span>Discord · idevi</span>
+            </button>
+          </li>
+          <li>
+            <a class="link" href="https://github.com/1Devi" rel="me noopener">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" /></svg>
+              <span>GitHub</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section aria-labelledby="projects-title">
+        <h2 id="projects-title">Projects</h2>
+        <!-- Filled from GitHub by the script below (public repos, newest first). This card is
+             the fallback when the API is unavailable or scripts don't run, e.g. for crawlers. -->
+        <ul class="projects" id="projects">
+          <li class="project">
+            <svg class="project-logo" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <rect x="2" y="2" width="28" height="28" rx="8" fill="#2b7de9" />
+              <path d="M13 10.5v11l8.5-5.5z" fill="#fff" />
+            </svg>
+            <div class="project-body">
+              <a class="project-name" href="/video-to-tg-sticker/">TG Sticker Maker</a>
+              <p class="project-desc">Turn any video into a Telegram video sticker</p>
+              <a class="project-alt" href="/video-to-tg-sticker/?lang=ru" hreflang="ru" lang="ru">На русском</a>
+            </div>
+            <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="m9 6 6 6-6 6" />
+            </svg>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script>
+      // Full years since 20.03.2002.
+      const born = new Date(2002, 2, 20);
+      const now = new Date();
+      const hadBirthday =
+        now.getMonth() > born.getMonth() || (now.getMonth() === born.getMonth() && now.getDate() >= born.getDate());
+      document.getElementById('age').textContent = now.getFullYear() - born.getFullYear() - (hadBirthday ? 0 : 1);
+
+      // Projects: public, non-fork, non-archived repos. Add the topic "profile-hide" to a repo to skip it.
+      const USER = '1Devi';
+      const SITE = 'https://1devi.github.io/';
+
+      function el(tag, className, text) {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text) node.textContent = text;
+        return node;
+      }
+
+      function projectCard(repo) {
+        const homepage = repo.homepage && (/^https?:\/\//.test(repo.homepage) ? repo.homepage : 'https://' + repo.homepage);
+        const url = homepage || (repo.has_pages ? SITE + repo.name + '/' : repo.html_url);
+        const card = el('li', 'project');
+        card.append(el('span', 'project-mark', repo.name[0].toUpperCase()));
+        const body = el('div', 'project-body');
+        const name = el('a', 'project-name', repo.name);
+        name.href = url;
+        body.append(name);
+        if (repo.description) body.append(el('p', 'project-desc', repo.description));
+        const meta = el('div', 'project-meta');
+        if (repo.language) meta.append(el('span', '', repo.language));
+        if (url !== repo.html_url) {
+          const source = el('a', 'project-alt', 'Source');
+          source.href = repo.html_url;
+          meta.append(source);
+        }
+        if (meta.childElementCount) body.append(meta);
+        card.append(body);
+        card.insertAdjacentHTML(
+          'beforeend',
+          '<svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 6 6 6-6 6" /></svg>',
+        );
+        return card;
+      }
+
+      fetch('https://api.github.com/users/' + USER + '/repos?per_page=100&sort=pushed')
+        .then((response) => (response.ok ? response.json() : []))
+        .then((repos) => {
+          const shown = repos.filter(
+            (repo) =>
+              !repo.fork &&
+              !repo.archived &&
+              repo.name.toLowerCase() !== '1devi.github.io' &&
+              !(repo.topics || []).includes('profile-hide'),
+          );
+          if (shown.length) document.getElementById('projects').replaceChildren(...shown.map(projectCard));
+        })
+        .catch(() => {
+          // Offline or rate-limited: keep the fallback card.
+        });
+
+      // Copy the Discord username; the label confirms it for a moment.
+      for (const button of document.querySelectorAll('[data-copy]')) {
+        const label = button.querySelector('span');
+        const text = label.textContent;
+        button.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(button.dataset.copy);
+            label.textContent = 'Copied: ' + button.dataset.copy;
+          } catch {
+            label.textContent = 'Username: ' + button.dataset.copy;
+          }
+          setTimeout(() => (label.textContent = text), 1600);
+        });
+      }
+    </script>
+  </body>
+</html>
