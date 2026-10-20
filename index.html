@@ -6,41 +6,71 @@
     <title>1Devi</title>
     <!-- Yandex Webmaster verifies the whole host (1devi.github.io) on this page. Do not remove. -->
     <meta name="yandex-verification" content="2f6d73db8ab750c0" />
-    <meta name="description" content="Artemy (1Devi): projects and links." />
+    <meta name="description" content="Artemy (1Devi), developer: projects and links." />
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#f5f6f8" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#101217" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f3f4fa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0b12" media="(prefers-color-scheme: dark)" />
     <link rel="canonical" href="https://1devi.github.io/" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='8'%20fill='%232b7de9'/%3E%3Cpath%20d='M11.5%2011.5%2016.5%208v16'%20fill='none'%20stroke='%23fff'%20stroke-width='3.4'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="1Devi" />
-    <meta property="og:description" content="Projects and links." />
+    <meta property="og:description" content="Artemy, developer: projects and links." />
     <meta property="og:url" content="https://1devi.github.io/" />
-    <meta property="og:image" content="https://github.com/1Devi.png" />
+    <meta property="og:image" content="https://1devi.github.io/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="1Devi — Artemy, developer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400..800&display=swap" />
     <style>
       :root {
-        --bg: #f5f6f8;
-        --surface: #ffffff;
-        --surface-hover: #eef2f8;
-        --border: #e0e3e9;
-        --border-hover: #c3cad6;
-        --text: #15171c;
-        --muted: #5b6270;
-        --accent: #2b7de9;
-        --shadow: 0 1px 2px rgb(16 18 23 / 0.05);
-        --radius: 14px;
+        --bg: #f3f4fa;
+        --surface: rgb(255 255 255 / 0.6);
+        --surface-hover: rgb(255 255 255 / 0.82);
+        --border: rgb(22 26 45 / 0.08);
+        --border-hover: rgb(22 26 45 / 0.16);
+        --highlight: rgb(255 255 255 / 0.9); /* inner top edge of the glass */
+        --text: #12141c;
+        --muted: #5a6072;
+        --accent: #3767f0;
+        --success: #16a34a;
+        --chip: rgb(255 255 255 / 0.55);
+        --dot-off: rgb(90 96 114 / 0.25);
+        --blob-1: rgb(105 145 255 / 0.55);
+        --blob-2: rgb(180 135 255 / 0.45);
+        --blob-3: rgb(255 150 190 / 0.45);
+        --noise: 0.05;
+        --shadow: 0 1px 2px rgb(20 24 45 / 0.04), 0 12px 32px -20px rgb(20 24 45 / 0.3);
+        --shadow-hover: 0 2px 6px rgb(20 24 45 / 0.06), 0 24px 48px -22px rgb(20 24 45 / 0.42);
+        --radius: 18px;
+        --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+        /* Monochrome icons for the right column, painted with mask + background-color. */
+        --i-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7M8.5 7H17v8.5'/%3E%3C/svg%3E");
+        --i-copy: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='9' y='9' width='12' height='12' rx='2.5'/%3E%3Cpath d='M5 15V5.5A2.5 2.5 0 0 1 7.5 3H15'/%3E%3C/svg%3E");
+        --i-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12.5 4.5 4.5L19 7.5'/%3E%3C/svg%3E");
       }
       @media (prefers-color-scheme: dark) {
         :root {
-          --bg: #101217;
-          --surface: #181b22;
-          --surface-hover: #20242d;
-          --border: #2a2f39;
-          --border-hover: #404756;
-          --text: #e9ebef;
-          --muted: #9aa2b1;
-          --accent: #6ea8ff;
-          --shadow: none;
+          --bg: #0a0b12;
+          --surface: rgb(26 29 42 / 0.55);
+          --surface-hover: rgb(36 40 58 / 0.72);
+          --border: rgb(255 255 255 / 0.08);
+          --border-hover: rgb(255 255 255 / 0.17);
+          --highlight: rgb(255 255 255 / 0.06);
+          --text: #eef0f6;
+          --muted: #a3aabb;
+          --accent: #84a9ff;
+          --success: #4ade80;
+          --chip: rgb(255 255 255 / 0.05);
+          --dot-off: rgb(163 170 187 / 0.25);
+          --blob-1: rgb(50 90 255 / 0.34);
+          --blob-2: rgb(135 65 235 / 0.3);
+          --blob-3: rgb(225 65 140 / 0.22);
+          --noise: 0.07;
+          --shadow: 0 12px 32px -20px rgb(0 0 0 / 0.8);
+          --shadow-hover: 0 26px 50px -24px rgb(0 0 0 / 0.95);
         }
       }
       *,
@@ -53,16 +83,94 @@
         text-size-adjust: 100%;
       }
       body {
+        position: relative;
+        isolation: isolate;
+        min-height: 100vh;
+        min-height: 100dvh;
         margin: 0;
         background: var(--bg);
         color: var(--text);
-        font: 16px/1.5 system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        font: 16px/1.5 'Onest', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
+
+      /* Background: three colour blobs, each floating on its own path, under a fine film grain */
+      .aurora {
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        overflow: hidden;
+        pointer-events: none;
+      }
+      .aurora span {
+        position: absolute;
+        width: 70vmax;
+        height: 70vmax;
+        border-radius: 50%;
+        background: radial-gradient(closest-side, var(--blob), transparent);
+        will-change: transform;
+      }
+      .aurora span:nth-child(1) {
+        --blob: var(--blob-1);
+        top: -30vmax;
+        left: -28vmax;
+        animation: float-1 19s ease-in-out infinite alternate;
+      }
+      .aurora span:nth-child(2) {
+        --blob: var(--blob-2);
+        top: -18vmax;
+        right: -32vmax;
+        animation: float-2 23s ease-in-out infinite alternate;
+      }
+      .aurora span:nth-child(3) {
+        --blob: var(--blob-3);
+        bottom: -38vmax;
+        left: -8vmax;
+        animation: float-3 27s ease-in-out infinite alternate;
+      }
+      @keyframes float-1 {
+        to {
+          transform: translate(20vmax, 16vmax) scale(1.15);
+        }
+      }
+      @keyframes float-2 {
+        to {
+          transform: translate(-22vmax, 20vmax) scale(0.85);
+        }
+      }
+      @keyframes float-3 {
+        to {
+          transform: translate(24vmax, -16vmax) scale(1.2);
+        }
+      }
+      body::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        opacity: var(--noise);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        pointer-events: none;
+      }
+
+      /* Phone layout: one column — profile, links, projects, skills.
+         The two wrappers only exist for the desktop columns, so here they step aside. */
       main {
-        max-width: 520px;
+        display: flex;
+        flex-direction: column;
+        max-width: 540px;
         margin: 0 auto;
-        padding: clamp(40px, 9vh, 88px) 16px 64px;
+        padding: clamp(48px, 10vh, 96px) 16px 72px;
       }
+      .side,
+      .feed {
+        display: contents;
+      }
+      .profile { order: 1; }
+      .links-nav { order: 2; }
+      .projects-section { order: 3; }
+      .skills-section { order: 4; }
       ul {
         list-style: none;
         margin: 0;
@@ -71,106 +179,236 @@
       a:focus-visible {
         outline: 2px solid var(--accent);
         outline-offset: 2px;
+        border-radius: 4px;
       }
 
       /* Header */
       .profile {
         text-align: center;
-        margin-bottom: 32px;
+        margin-bottom: 36px;
+      }
+      .avatar-ring {
+        position: relative;
+        isolation: isolate;
+        width: 128px;
+        height: 128px;
+        margin: 0 auto 22px;
+        border-radius: 50%;
+      }
+      .avatar-ring::before,
+      .avatar-ring::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: 50%;
+        background: conic-gradient(from 0deg, #4f8bff, #9b6bff, #ff6fa8, #ffb067, #4f8bff);
+        animation: spin 14s linear infinite;
+      }
+      .avatar-ring::after {
+        z-index: -2;
+        inset: 8px;
+        filter: blur(22px);
+        opacity: 0.6;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(1turn);
+        }
       }
       .avatar {
         display: block;
-        width: 112px;
-        height: 112px;
-        margin: 0 auto 16px;
+        width: 120px;
+        height: 120px;
+        margin: 4px;
+        border: 3px solid var(--bg);
         border-radius: 50%;
         object-fit: cover;
-        background: var(--border);
-        box-shadow: 0 0 0 1px var(--border);
+        background: var(--bg);
       }
       h1 {
         margin: 0;
-        font-size: 1.75rem;
-        line-height: 1.2;
-        letter-spacing: -0.01em;
+        font-size: clamp(2.125rem, 7vw, 2.625rem);
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.035em;
+        background: linear-gradient(115deg, var(--text) 35%, color-mix(in srgb, var(--accent) 75%, var(--text)));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
       }
       .bio {
-        margin: 6px 0 0;
+        margin: 8px 0 0;
         color: var(--muted);
+        font-size: 1.0625rem;
+        font-weight: 500;
       }
 
-      /* Social links: full-width buttons, icon on the left, label centered */
+      /* Shared glass card */
+      .link,
+      .project {
+        --glow: var(--accent);
+        position: relative;
+        isolation: isolate;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: inset 0 1px 0 var(--highlight), var(--shadow);
+        -webkit-backdrop-filter: blur(18px) saturate(160%);
+        backdrop-filter: blur(18px) saturate(160%);
+        transition:
+          transform 0.35s var(--ease),
+          box-shadow 0.35s var(--ease),
+          background-color 0.2s,
+          border-color 0.2s;
+      }
+      /* Soft light that follows the pointer (position set by the script) */
+      .link::before,
+      .project::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: inherit;
+        background: radial-gradient(
+          240px circle at var(--x, 50%) var(--y, 50%),
+          color-mix(in srgb, var(--glow) 22%, transparent),
+          transparent 70%
+        );
+        opacity: 0;
+        transition: opacity 0.3s;
+        pointer-events: none;
+      }
+
+      /* Social links: full-width buttons, brand tile on the left, label centered */
       .links {
         display: grid;
         gap: 12px;
       }
       .link {
         display: grid;
-        grid-template-columns: 24px 1fr 24px;
+        grid-template-columns: 40px 1fr 40px;
         align-items: center;
         gap: 12px;
-        min-height: 56px;
-        padding: 12px 16px;
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
+        min-height: 64px;
+        padding: 11px 12px;
         color: inherit;
+        font-size: 1.0625rem;
         font-weight: 600;
         text-align: center;
         text-decoration: none;
-        transition: background-color 0.15s, border-color 0.15s;
+        -webkit-tap-highlight-color: transparent;
       }
       button.link {
         width: 100%;
         font: inherit;
+        font-size: 1.0625rem;
         font-weight: 600;
         cursor: pointer;
       }
       .link:focus-visible {
         outline: 2px solid var(--accent);
-        outline-offset: 2px;
+        outline-offset: 3px;
       }
-      .link::after {
-        content: ''; /* empty third column keeps the label centered */
+      .tile {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        background: var(--brand, var(--accent));
+        color: #fff;
+        box-shadow:
+          inset 0 0 0 1px rgb(255 255 255 / 0.14),
+          0 6px 14px -6px color-mix(in srgb, var(--glow) 75%, transparent);
+        transition: transform 0.4s var(--ease);
       }
       .icon {
         display: block;
         width: 22px;
         height: 22px;
+      }
+      .link::after {
+        content: '';
         justify-self: center;
+        width: 18px;
+        height: 18px;
+        background-color: var(--muted);
+        -webkit-mask: var(--i-arrow) center / contain no-repeat;
+        mask: var(--i-arrow) center / contain no-repeat;
+        opacity: 0.55;
+        transition:
+          transform 0.35s var(--ease),
+          opacity 0.2s,
+          background-color 0.2s;
+      }
+      button.link::after {
+        -webkit-mask-image: var(--i-copy);
+        mask-image: var(--i-copy);
+      }
+      .link.is-copied {
+        --glow: var(--success);
+        border-color: color-mix(in srgb, var(--success) 45%, var(--border));
+      }
+      .link.is-copied::after {
+        -webkit-mask-image: var(--i-check);
+        mask-image: var(--i-check);
+        background-color: var(--success);
+        opacity: 1;
       }
 
       /* Projects */
       h2 {
-        margin: 40px 0 12px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 44px 4px 14px;
         color: var(--muted);
-        font-size: 0.8125rem;
-        font-weight: 600;
-        letter-spacing: 0.08em;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
+      }
+      h2::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(90deg, var(--border-hover), transparent);
       }
       .projects {
         display: grid;
         gap: 12px;
       }
       .project {
-        position: relative;
+        --glow: hsl(var(--h, 220) 85% 62%);
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         gap: 14px;
-        padding: 16px;
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
-        transition: background-color 0.15s, border-color 0.15s;
+        padding: 14px;
       }
-      .project-logo {
+      .project-icon {
         flex: none;
         display: block;
-        width: 44px;
-        height: 44px;
+        width: 52px;
+        height: 52px;
+        object-fit: contain;
+        filter: drop-shadow(0 8px 12px color-mix(in srgb, var(--glow) 30%, transparent));
+      }
+      .project-mark {
+        flex: none;
+        display: grid;
+        place-items: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 15px;
+        background: linear-gradient(140deg, hsl(var(--h, 220) 90% 68%), hsl(calc(var(--h, 220) + 30) 78% 50%));
+        box-shadow:
+          inset 0 0 0 1px rgb(255 255 255 / 0.18),
+          0 8px 18px -8px hsl(var(--h, 220) 80% 50% / 0.7);
+        color: #fff;
+        font-size: 1.375rem;
+        font-weight: 800;
+        text-shadow: 0 1px 2px rgb(0 0 0 / 0.18);
       }
       .project-body {
         flex: 1;
@@ -178,8 +416,11 @@
       }
       .project-name {
         color: inherit;
-        font-weight: 600;
+        font-size: 1.0625rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
         text-decoration: none;
+        overflow-wrap: anywhere;
       }
       .project-name::after {
         /* makes the whole card clickable */
@@ -193,148 +434,393 @@
       }
       .project-name:focus-visible::after {
         outline: 2px solid var(--accent);
-        outline-offset: 2px;
+        outline-offset: 3px;
       }
       .project-desc {
-        margin: 2px 0 8px;
+        margin: 2px 0 0;
         color: var(--muted);
         font-size: 0.9375rem;
+        line-height: 1.45;
+      }
+      .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 4px 16px;
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 0.8125rem;
+        font-weight: 500;
+      }
+      .lang {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+      }
+      .lang::before {
+        content: '';
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--lang, var(--muted));
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--lang, var(--muted)) 20%, transparent);
+      }
+      .stars {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .stars svg {
+        width: 13px;
+        height: 13px;
+        color: #e3a92b;
       }
       .project-alt {
         position: relative;
         z-index: 1;
         color: var(--accent);
-        font-size: 0.875rem;
+        font-weight: 600;
         text-decoration: none;
-      }
-      .project-mark {
-        flex: none;
-        display: grid;
-        place-items: center;
-        width: 44px;
-        height: 44px;
-        border-radius: 12px;
-        background: color-mix(in srgb, var(--accent) 16%, transparent);
-        color: var(--accent);
-        font-size: 1.25rem;
-        font-weight: 700;
-      }
-      .project-meta {
-        display: flex;
-        gap: 12px;
-        color: var(--muted);
-        font-size: 0.875rem;
+        text-underline-offset: 3px;
       }
       .project-arrow {
         flex: none;
-        align-self: center;
         width: 20px;
         height: 20px;
         color: var(--muted);
+        opacity: 0.7;
+        transition:
+          transform 0.35s var(--ease),
+          opacity 0.2s;
+      }
+
+      /* Skills: quiet chips (not links), the grade drawn as three dots */
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .skill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        height: 36px;
+        padding: 0 13px 0 11px;
+        background: var(--chip);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .skill-icon {
+        flex: none;
+        width: 16px;
+        height: 16px;
+        opacity: 0.85;
+      }
+      .grade {
+        flex: none;
+        width: 24px;
+        height: 6px;
+        margin-left: 2px;
+        background: linear-gradient(90deg, var(--accent) calc(var(--grade, 0) * 8px), var(--dot-off) 0);
+        -webkit-mask: radial-gradient(circle closest-side, #000 92%, transparent) 0 0 / 8px 6px repeat-x;
+        mask: radial-gradient(circle closest-side, #000 92%, transparent) 0 0 / 8px 6px repeat-x;
       }
 
       @media (hover: hover) {
         .link:hover,
         .project:hover {
           background: var(--surface-hover);
-          border-color: var(--border-hover);
+          border-color: color-mix(in srgb, var(--glow) 38%, var(--border-hover));
+          box-shadow:
+            inset 0 1px 0 var(--highlight),
+            var(--shadow-hover),
+            0 14px 36px -18px color-mix(in srgb, var(--glow) 55%, transparent);
+          transform: translateY(-2px);
+        }
+        .link:hover::before,
+        .project:hover::before {
+          opacity: 1;
+        }
+        .link:hover .tile {
+          transform: scale(1.07) rotate(-5deg);
+        }
+        .link:hover::after {
+          opacity: 1;
+          background-color: var(--text);
+          transform: translate(2px, -2px);
+        }
+        button.link:hover::after {
+          transform: scale(1.1);
+        }
+        .link.is-copied:hover::after {
+          background-color: var(--success);
+        }
+        .project:hover .project-arrow {
+          opacity: 1;
+          transform: translateX(3px);
         }
         .project-alt:hover {
           text-decoration: underline;
         }
       }
+      .link:active,
+      .project:active {
+        transform: translateY(0) scale(0.985);
+        transition-duration: 0.1s;
+      }
+
+      /* Entrance: everything rises in, one after another */
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(16px) scale(0.98);
+        }
+      }
+      .avatar-ring,
+      h1,
+      .bio,
+      .link,
+      h2,
+      .project,
+      .skills {
+        animation: rise 0.8s var(--ease) backwards;
+        animation-delay: calc(var(--d, 0) * 1ms);
+      }
+      .avatar-ring {
+        /* the ring's own spin lives on its pseudo-elements */
+        --d: 0;
+      }
+      h1 { --d: 70; }
+      .bio { --d: 130; }
+      .links li:nth-child(1) .link { --d: 190; }
+      .links li:nth-child(2) .link { --d: 240; }
+      .links li:nth-child(3) .link { --d: 290; }
+      .links li:nth-child(4) .link { --d: 340; }
+      .links li:nth-child(5) .link { --d: 390; }
+      .links li:nth-child(6) .link { --d: 440; }
+      .links li:nth-child(n + 7) .link { --d: 490; }
+      .projects-section h2 { --d: 500; }
+      .projects > :nth-child(1) { --d: 560; }
+      .projects > :nth-child(2) { --d: 630; }
+      .projects > :nth-child(3) { --d: 700; }
+      .projects > :nth-child(n + 4) { --d: 770; }
+      .skills-section h2 { --d: 700; }
+      .skills { --d: 760; }
+
+      /* Desktop: a profile card on the left (photo, name, skills), links and projects on the right */
+      @media (min-width: 960px) {
+        main {
+          display: grid;
+          grid-template-columns: 360px minmax(0, 1fr);
+          align-items: start;
+          align-content: center;
+          gap: 40px;
+          max-width: 1080px;
+          min-height: 100vh;
+          min-height: 100dvh;
+          padding: 56px 32px;
+        }
+        .side,
+        .feed {
+          display: block;
+        }
+        .side {
+          padding: 36px 28px 30px;
+          background: var(--surface);
+          border: 1px solid var(--border);
+          border-radius: 28px;
+          box-shadow: inset 0 1px 0 var(--highlight), var(--shadow);
+          -webkit-backdrop-filter: blur(18px) saturate(160%);
+          backdrop-filter: blur(18px) saturate(160%);
+        }
+        .profile {
+          margin-bottom: 0;
+        }
+        .side h2 {
+          justify-content: center;
+          margin: 30px 0 16px;
+        }
+        .side h2::before {
+          content: '';
+          flex: 1;
+          height: 1px;
+          background: linear-gradient(270deg, var(--border-hover), transparent);
+        }
+        .skills {
+          justify-content: center;
+        }
+        .links {
+          grid-template-columns: 1fr 1fr;
+        }
+        .projects-section h2 {
+          margin-top: 36px;
+        }
+        .skills-section h2 { --d: 200; }
+        .skills { --d: 260; }
+      }
+      /* Keeps the card in view when the projects list grows, if the screen is tall enough for it. */
+      @media (min-width: 960px) and (min-height: 640px) {
+        .side {
+          position: sticky;
+          top: 48px;
+        }
+      }
+
       @media (prefers-reduced-motion: reduce) {
-        .link,
-        .project {
-          transition: none;
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+        }
+        .link:hover,
+        .project:hover,
+        .link:active,
+        .project:active,
+        .link:hover .tile,
+        .link:hover::after,
+        .project:hover .project-arrow {
+          transform: none;
         }
       }
     </style>
   </head>
   <body>
+    <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
     <main>
-      <header class="profile">
-        <img
-          class="avatar"
-          src="https://github.com/1Devi.png?size=224"
-          width="112"
-          height="112"
-          alt="1Devi"
-        />
-        <h1>1Devi</h1>
-        <!-- The age is recalculated by the script below; the number here is for no-JS visitors. -->
-        <p class="bio">Artemy, <span id="age">24</span> y.o.</p>
-      </header>
+      <div class="side">
+        <header class="profile">
+          <div class="avatar-ring">
+            <img
+              class="avatar"
+              src="https://github.com/1Devi.png?size=240"
+              width="120"
+              height="120"
+              alt="1Devi"
+            />
+          </div>
+          <h1>1Devi</h1>
+          <!-- The script below keeps the age current; this text is for no-JS visitors. -->
+          <p class="bio" id="bio">Artemy, 24 y.o. · Developer</p>
+        </header>
 
-      <!--
-        SOCIAL LINKS — one <li> per link, in page order.
-        Add one: copy a block, change href and the label, and take the icon's d="..."
-        from https://simpleicons.org (Simple Icons, CC0 1.0; brand names and logos are
-        trademarks of their owners). Icons use currentColor, so they follow the theme.
-      -->
-      <nav aria-label="Social links">
-        <ul class="links">
-          <li>
-            <a class="link" href="https://t.me/iDeviluxe" rel="me noopener">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" /></svg>
-              <span>Telegram</span>
-            </a>
-          </li>
-          <li>
-            <a class="link" href="https://x.com/deviluxe" rel="me noopener">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z" /></svg>
-              <span>X</span>
-            </a>
-          </li>
-          <li>
-            <a class="link" href="https://www.instagram.com/artemy_sv/" rel="me noopener">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" /></svg>
-              <span>Instagram</span>
-            </a>
-          </li>
-          <li>
-            <a class="link" href="https://www.tiktok.com/@1devi" rel="me noopener">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" /></svg>
-              <span>TikTok</span>
-            </a>
-          </li>
-          <li>
-            <!-- Discord has no profile URL by username, so this button copies it instead. -->
-            <button class="link" type="button" data-copy="idevi">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" /></svg>
-              <span>Discord · idevi</span>
-            </button>
-          </li>
-          <li>
-            <a class="link" href="https://github.com/1Devi" rel="me noopener">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" /></svg>
-              <span>GitHub</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+        <section class="skills-section" aria-labelledby="skills-title">
+          <h2 id="skills-title">Skills</h2>
+          <!--
+            SKILLS — one <li> per skill, strongest first. --grade is the level out of 3 (the filled
+            dots); a skill without a grade simply has no .grade span. Icons come from
+            https://simpleicons.org, like the social ones.
+          -->
+          <ul class="skills">
+            <li class="skill">
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.5921 9.1962s-.354-3.298-3.627-3.39c-3.2741-.09-4.9552 2.474-4.9552 6.14 0 3.6651 1.858 6.5972 5.0451 6.5972 3.184 0 3.5381-3.665 3.5381-3.665l6.1041.365s.36 3.31-2.196 5.836c-2.552 2.5241-5.6901 2.9371-7.8762 2.9201-2.19-.017-5.2261.034-8.1602-2.97-2.938-3.0101-3.436-5.9302-3.436-8.8002 0-2.8701.556-6.6702 4.047-9.5502C7.444.72 9.849 0 12.254 0c10.0422 0 10.7172 9.2602 10.7172 9.2602z" /></svg>
+              C / C++
+              <span class="grade" style="--grade: 2" role="img" aria-label="grade 2 of 3" title="Grade 2 of 3"></span>
+            </li>
+            <li class="skill">
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z" /></svg>
+              Python
+              <span class="grade" style="--grade: 1" role="img" aria-label="grade 1 of 3" title="Grade 1 of 3"></span>
+            </li>
+            <li class="skill">
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z" /></svg>
+              HTML
+              <span class="grade" style="--grade: 1" role="img" aria-label="grade 1 of 3" title="Grade 1 of 3"></span>
+            </li>
+            <li class="skill">
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z" /></svg>
+              React
+              <span class="grade" style="--grade: 1" role="img" aria-label="grade 1 of 3" title="Grade 1 of 3"></span>
+            </li>
+            <li class="skill">
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z" /></svg>
+              JavaScript
+              <span class="grade" style="--grade: 1" role="img" aria-label="grade 1 of 3" title="Grade 1 of 3"></span>
+            </li>
+            <li class="skill">
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z" /></svg>
+              Claude
+            </li>
+          </ul>
+        </section>
+      </div>
 
-      <section aria-labelledby="projects-title">
-        <h2 id="projects-title">Projects</h2>
-        <!-- Filled from GitHub by the script below (public repos, newest first). This card is
-             the fallback when the API is unavailable or scripts don't run, e.g. for crawlers. -->
-        <ul class="projects" id="projects">
-          <li class="project">
-            <svg class="project-logo" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-              <rect x="2" y="2" width="28" height="28" rx="8" fill="#2b7de9" />
-              <path d="M13 10.5v11l8.5-5.5z" fill="#fff" />
-            </svg>
-            <div class="project-body">
-              <a class="project-name" href="/video-to-tg-sticker/">TG Sticker Maker</a>
-              <p class="project-desc">Turn any video into a Telegram video sticker</p>
-              <a class="project-alt" href="/video-to-tg-sticker/?lang=ru" hreflang="ru" lang="ru">На русском</a>
-            </div>
-            <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-              <path d="m9 6 6 6-6 6" />
-            </svg>
-          </li>
-        </ul>
-      </section>
+      <div class="feed">
+        <!--
+          SOCIAL LINKS — one <li> per link, in page order.
+          Add one: copy a block, change href, the label, --brand (tile background: a colour or a
+          gradient) and --glow (hover tint: a plain colour), and take the icon's d="..."
+          from https://simpleicons.org (Simple Icons, CC0 1.0; brand names and logos are
+          trademarks of their owners). Icons use currentColor and sit white on the tile.
+        -->
+        <nav class="links-nav" aria-label="Social links">
+          <ul class="links">
+            <li>
+              <a class="link" href="https://t.me/iDeviluxe" rel="me noopener" style="--brand: linear-gradient(160deg, #37bbfe, #007dbb); --glow: #27a7e7">
+                <span class="tile"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" /></svg></span>
+                <span class="label">Telegram</span>
+              </a>
+            </li>
+            <li>
+              <a class="link" href="https://x.com/deviluxe" rel="me noopener" style="--brand: #0f1419; --glow: #8b98a5">
+                <span class="tile"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z" /></svg></span>
+                <span class="label">X</span>
+              </a>
+            </li>
+            <li>
+              <a class="link" href="https://www.instagram.com/artemy_sv/" rel="me noopener" style="--brand: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%); --glow: #e1306c">
+                <span class="tile"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" /></svg></span>
+                <span class="label">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a class="link" href="https://www.tiktok.com/@1devi" rel="me noopener" style="--brand: #0f0f10; --glow: #fe2c55">
+                <span class="tile"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" /></svg></span>
+                <span class="label">TikTok</span>
+              </a>
+            </li>
+            <li>
+              <!-- Discord has no profile URL by username, so this button copies it instead. -->
+              <button class="link" type="button" data-copy="idevi" style="--brand: #5865f2; --glow: #5865f2">
+                <span class="tile"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" /></svg></span>
+                <span class="label" aria-live="polite">Discord · idevi</span>
+              </button>
+            </li>
+            <li>
+              <a class="link" href="https://github.com/1Devi" rel="me noopener" style="--brand: #1f2328; --glow: #8957e5">
+                <span class="tile"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" /></svg></span>
+                <span class="label">GitHub</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <section class="projects-section" aria-labelledby="projects-title">
+          <h2 id="projects-title">Projects</h2>
+          <!-- Filled from GitHub by the script below (public repos, newest first). This card is the
+               fallback when the API is unavailable or scripts don't run, e.g. for crawlers; it copies
+               what the script builds for that repo, so nothing jumps when the real list arrives. -->
+          <ul class="projects" id="projects">
+            <li class="project">
+              <img class="project-icon" src="https://1devi.github.io/video-to-tg-sticker/favicon.svg" width="52" height="52" alt="" />
+              <div class="project-body">
+                <a class="project-name" href="https://1devi.github.io/video-to-tg-sticker/">TG Sticker Maker</a>
+                <p class="project-desc">Turn any video into a Telegram video sticker (WebM VP9, 512×512, up to 3 s) right in the browser.</p>
+                <div class="project-meta">
+                  <span class="lang" style="--lang: #3178c6">TypeScript</span>
+                  <a class="project-alt" href="https://github.com/1Devi/video-to-tg-sticker">Source</a>
+                </div>
+              </div>
+              <svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="m9 6 6 6-6 6" />
+              </svg>
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
     <script>
       // Full years since 20.03.2002.
@@ -342,11 +828,37 @@
       const now = new Date();
       const hadBirthday =
         now.getMonth() > born.getMonth() || (now.getMonth() === born.getMonth() && now.getDate() >= born.getDate());
-      document.getElementById('age').textContent = now.getFullYear() - born.getFullYear() - (hadBirthday ? 0 : 1);
+      const age = now.getFullYear() - born.getFullYear() - (hadBirthday ? 0 : 1);
+      document.getElementById('bio').textContent = `Artemy, ${age} y.o. · Developer`;
 
       // Projects: public, non-fork, non-archived repos. Add the topic "profile-hide" to a repo to skip it.
       const USER = '1Devi';
       const SITE = 'https://1devi.github.io/';
+      // GitHub's language colours for the dot next to the language name.
+      const LANG_COLORS = {
+        TypeScript: '#3178c6',
+        JavaScript: '#f1e05a',
+        HTML: '#e34c26',
+        CSS: '#663399',
+        Python: '#3572a5',
+        Go: '#00add8',
+        Rust: '#dea584',
+        'C#': '#178600',
+        'C++': '#f34b7d',
+        C: '#555555',
+        Java: '#b07219',
+        Kotlin: '#a97bff',
+        Swift: '#f05138',
+        Dart: '#00b4ab',
+        Shell: '#89e051',
+        Lua: '#000080',
+        PHP: '#4f5d95',
+        Ruby: '#701516',
+        Vue: '#41b883',
+        Svelte: '#ff3e00',
+      };
+      // Hues for the letter badges; each repo always gets the same one.
+      const HUES = [214, 252, 282, 330, 350, 18, 158, 190];
 
       function el(tag, className, text) {
         const node = document.createElement(tag);
@@ -355,23 +867,97 @@
         return node;
       }
 
-      function projectCard(repo) {
+      function hueFor(name) {
+        let hash = 0;
+        for (const char of name) hash = (hash * 31 + char.codePointAt(0)) >>> 0;
+        return HUES[hash % HUES.length];
+      }
+
+      // "3 days ago", in the largest unit that fits.
+      const relativeTime = new Intl.RelativeTimeFormat('en', { numeric: 'auto' });
+      const UNITS = [['year', 31536000], ['month', 2592000], ['week', 604800], ['day', 86400], ['hour', 3600], ['minute', 60]];
+      function ago(date) {
+        const seconds = (new Date(date) - Date.now()) / 1000;
+        const [unit, size] = UNITS.find(([, size]) => Math.abs(seconds) >= size) || UNITS[UNITS.length - 1];
+        return relativeTime.format(Math.round(seconds / size), unit);
+      }
+
+      // Stars (only once there are some) and the last push, placed after the language and before the links.
+      function addStats(meta, repo) {
+        const before = meta.querySelector('a');
+        if (repo.stargazers_count) {
+          const stars = el('span', 'stars', String(repo.stargazers_count));
+          stars.title = 'GitHub stars: ' + repo.stargazers_count;
+          stars.insertAdjacentHTML(
+            'afterbegin',
+            '<svg viewBox="0 0 16 16" fill="currentColor" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 1.4 9.7 5.85 14.47 6.1 10.76 9.1 12 13.7 8 11.1 4 13.7 5.24 9.1 1.53 6.1 6.3 5.85z" /></svg>',
+          );
+          meta.insertBefore(stars, before);
+        }
+        if (repo.pushed_at) {
+          const updated = el('span', 'updated', 'updated ' + ago(repo.pushed_at));
+          updated.title = new Date(repo.pushed_at).toLocaleDateString('en', { dateStyle: 'long' });
+          meta.insertBefore(updated, before);
+        }
+      }
+
+      function projectUrl(repo) {
         const homepage = repo.homepage && (/^https?:\/\//.test(repo.homepage) ? repo.homepage : 'https://' + repo.homepage);
-        const url = homepage || (repo.has_pages ? SITE + repo.name + '/' : repo.html_url);
+        return homepage || (repo.has_pages ? SITE + repo.name + '/' : repo.html_url);
+      }
+
+      // A project with its own page names itself there: og:site_name, or the <title> up to " — ".
+      // Its favicon becomes the card icon. No page (or no answer): the repo name and a letter badge.
+      async function pageInfo(url) {
+        try {
+          const response = await fetch(url, { signal: AbortSignal.timeout(2500) });
+          if (!response.ok || !(response.headers.get('content-type') || '').includes('text/html')) return {};
+          const doc = new DOMParser().parseFromString(await response.text(), 'text/html');
+          const name = doc.querySelector('meta[property="og:site_name"]')?.content || doc.title.split(/\s[—–|·-]\s/)[0];
+          const icon =
+            doc.querySelector('link[rel~="icon"][type="image/svg+xml"]') ||
+            doc.querySelector('link[rel="apple-touch-icon"]') ||
+            doc.querySelector('link[rel~="icon"]');
+          return { name: name.trim(), icon: icon && new URL(icon.getAttribute('href'), response.url).href };
+        } catch {
+          return {};
+        }
+      }
+
+      function projectCard(repo, url, page) {
+        const title = page.name || repo.name;
         const card = el('li', 'project');
-        card.append(el('span', 'project-mark', repo.name[0].toUpperCase()));
+        const mark = el('span', 'project-mark', title[0].toUpperCase());
+        mark.setAttribute('aria-hidden', 'true');
+        const useMark = () => card.style.setProperty('--h', hueFor(repo.name));
+        if (page.icon) {
+          const icon = el('img', 'project-icon');
+          icon.alt = '';
+          icon.width = icon.height = 52;
+          icon.addEventListener('error', () => (icon.replaceWith(mark), useMark()), { once: true });
+          icon.src = page.icon;
+          card.append(icon);
+        } else {
+          useMark();
+          card.append(mark);
+        }
         const body = el('div', 'project-body');
-        const name = el('a', 'project-name', repo.name);
+        const name = el('a', 'project-name', title);
         name.href = url;
         body.append(name);
         if (repo.description) body.append(el('p', 'project-desc', repo.description));
         const meta = el('div', 'project-meta');
-        if (repo.language) meta.append(el('span', '', repo.language));
+        if (repo.language) {
+          const lang = el('span', 'lang', repo.language);
+          if (LANG_COLORS[repo.language]) lang.style.setProperty('--lang', LANG_COLORS[repo.language]);
+          meta.append(lang);
+        }
         if (url !== repo.html_url) {
           const source = el('a', 'project-alt', 'Source');
           source.href = repo.html_url;
           meta.append(source);
         }
+        addStats(meta, repo);
         if (meta.childElementCount) body.append(meta);
         card.append(body);
         card.insertAdjacentHTML(
@@ -383,7 +969,7 @@
 
       fetch('https://api.github.com/users/' + USER + '/repos?per_page=100&sort=pushed')
         .then((response) => (response.ok ? response.json() : []))
-        .then((repos) => {
+        .then(async (repos) => {
           const shown = repos.filter(
             (repo) =>
               !repo.fork &&
@@ -391,25 +977,55 @@
               repo.name.toLowerCase() !== '1devi.github.io' &&
               !(repo.topics || []).includes('profile-hide'),
           );
-          if (shown.length) document.getElementById('projects').replaceChildren(...shown.map(projectCard));
+          if (!shown.length) return;
+          const cards = await Promise.all(
+            shown.map(async (repo) => {
+              const url = projectUrl(repo);
+              return projectCard(repo, url, url === repo.html_url ? {} : await pageInfo(url));
+            }),
+          );
+          // Cards that arrive late rise in right away instead of waiting for the page's own stagger.
+          if (document.timeline.currentTime > 1000) cards.forEach((card, i) => card.style.setProperty('--d', i * 70));
+          document.getElementById('projects').replaceChildren(...cards);
         })
         .catch(() => {
           // Offline or rate-limited: keep the fallback card.
         });
 
-      // Copy the Discord username; the label confirms it for a moment.
+      // Copy the Discord username; the label and the icon confirm it for a moment.
       for (const button of document.querySelectorAll('[data-copy]')) {
-        const label = button.querySelector('span');
+        const label = button.querySelector('.label');
         const text = label.textContent;
+        let timer;
         button.addEventListener('click', async () => {
           try {
             await navigator.clipboard.writeText(button.dataset.copy);
             label.textContent = 'Copied: ' + button.dataset.copy;
+            button.classList.add('is-copied');
           } catch {
             label.textContent = 'Username: ' + button.dataset.copy;
           }
-          setTimeout(() => (label.textContent = text), 1600);
+          clearTimeout(timer);
+          timer = setTimeout(() => {
+            label.textContent = text;
+            button.classList.remove('is-copied');
+          }, 1600);
         });
+      }
+
+      // The soft light on cards follows the pointer.
+      if (matchMedia('(hover: hover)').matches) {
+        document.addEventListener(
+          'pointermove',
+          (event) => {
+            const card = event.target.closest('.link, .project');
+            if (!card) return;
+            const box = card.getBoundingClientRect();
+            card.style.setProperty('--x', event.clientX - box.left + 'px');
+            card.style.setProperty('--y', event.clientY - box.top + 'px');
+          },
+          { passive: true },
+        );
       }
     </script>
   </body>
